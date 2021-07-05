@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.bg-verde {
+  background-color: #4c7031;
 }
 
 .cards-plantas,
@@ -10,4 +10,11 @@
 .container {
   max-width: 95vw;
   height: auto;
+
+  
+.bg-amarelo {
+  background-color: #f2ae00;
+}
+.bg-laranja {
+  background-color: #ff7700;
 }
