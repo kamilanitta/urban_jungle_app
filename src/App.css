@@ -2,6 +2,16 @@
   background-color: #4c7031;
 }
 
+.cards-plantas,
+.imagem-planta {
+  text-align: center;
+}
+
+.container {
+  max-width: 95vw;
+  height: auto;
+
+  
 .bg-amarelo {
   background-color: #f2ae00;
 }
