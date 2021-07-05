@@ -1,5 +1,7 @@
+import React from "react";
+
 function PlantsGuide() {
-  return <div className="App"></div>;
+  return <div className=""></div>;
 }
 
 export default PlantsGuide;

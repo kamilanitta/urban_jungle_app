@@ -1,5 +1,19 @@
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import HomePage from "./components/HomePage";
+import Header from "./components/Header";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Route path="/" component={HomePage} />
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
