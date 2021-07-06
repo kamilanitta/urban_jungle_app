@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <nav
       className="navbar fixed-bottom navbar-light"
-      style={{ backgroundColor: "#0455E14" }}
+      style={{ height: "75px", backgroundColor: "#455E14" }}
     >
       <div
         className="container-fluid"
@@ -18,10 +18,12 @@ export default function Footer() {
         >
           <i className="fas fa-home"></i>
         </Link>
-        <Link style={{ color: "white", textDecoration: "none" }}>
+        <Link style={{ color: "white", textDecoration: "none" }}
+        to="/add-planta">
           <i className="fas fa-plus-circle"></i>
         </Link>
-        <Link style={{ color: "white", textDecoration: "none" }}>
+        <Link style={{ color: "white", textDecoration: "none" }}
+        >
           <i className="fas fa-leaf"></i>
         </Link>
       </div>
