@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <nav
-      className="navbar fixed-bottom navbar-light "
-      style={{ height: "75px", backgroundColor: "#455E14" }}
+
+      className="navbar fixed-bottom navbar-light bg-verde"
+      style={{ height: "75px" }}
+
+
     >
       <div
         className="container-fluid"
