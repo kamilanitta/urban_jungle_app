@@ -7,6 +7,8 @@ import "./App.css";
 import HomePage from "./components/HomePage";
 import Header from "./components/Header";
 import PlantsGuide from "./components/PlantsGuide";
+import PlantDescription from "./components/PlantDescription";
+import MyJungle from "./components/MyJungle";
 
 function App() {
   return (
@@ -15,6 +17,11 @@ function App() {
         <Header />
         <Route exact path="/" component={HomePage} />
         <Route path="/:categoria" component={PlantsGuide} />
+        {/* <MyJungle /> */}
+        {/* <PlantDescription /> */}
+
+        <Route path="/guia-plantas/:descricao" component={PlantDescription} />
+        <Route path="/my-jungle" component={MyJungle} />
         <Footer />
       </BrowserRouter>
     </div>

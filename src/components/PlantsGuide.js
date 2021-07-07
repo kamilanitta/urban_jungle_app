@@ -19,7 +19,7 @@ class PlantsGuide extends Component {
         return elemento.categoria.includes(categoriaPlanta);
       });
 
-      console.log(filtroCategorias);
+      //console.log(filtroCategorias);
 
       this.setState({ plantaList: filtroCategorias });
     } catch (err) {
@@ -37,7 +37,7 @@ class PlantsGuide extends Component {
                 <Link to={planta._id} className="links">
                   <img
                     src={planta.imagem}
-                    className="card-img-top mt-3"
+                    className="card-img-top "
                     alt="..."
                   />
                   <div className="card-body">
