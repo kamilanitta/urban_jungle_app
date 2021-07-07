@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Search from "./Search";
 
@@ -14,8 +15,10 @@ class PlantDescription extends Component {
   };
 
   componentDidMount = async () => {
+    const id = this.props.match.params.descricao;
+    console.log(id);
     const response = await axios.get(
-      `https://ironrest.herokuapp.com/1-urban-jungle/${this.props.match.params.id}`
+      `https://ironrest.herokuapp.com/1-urban-jungle/${id}`
     );
     console.log(response);
     this.setState({ ...response.data });
@@ -31,10 +34,22 @@ class PlantDescription extends Component {
           alt={this.state.nomePlanta}
         />
         <div className="d-flex justify-content-around mt-1">
-          <button className="btn rounded-pill bg-amarelo">Editar</button>
-          <button type="button" className="btn rounded-pill bg-laranja">
-            Deletar
-          </button>
+          {/* <Link
+            to={`/editar-planta/${this.state._id}`}
+            type="Editar planta"
+            className="btn rounded-pill bg-amarelo"
+            style={{ textDecoration: "none" }}
+          >
+            Editar
+          </Link>
+          <Link
+            to={`/apagar-planta/${this.state._id}`}
+            type="Apagar planta"
+            className="rounded-pill bg-laranja"
+            style={{ textDecoration: "none" }}
+          >
+            Apagar
+          </Link> */}
         </div>
         <div className="textos">
           <h4 className="mt-2">{this.state.nomePlanta}</h4>
