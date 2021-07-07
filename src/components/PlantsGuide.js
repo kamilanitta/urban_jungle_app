@@ -36,13 +36,18 @@ class PlantsGuide extends Component {
           {this.state.plantaList.map((planta) => {
             return (
 
+             
+
+
               <div className="card col">
                 <Link to={`/1-urban-jungle/${planta._id}`} className="links">
 
+
                   <img
                     src={planta.imagem}
-                    className="card-img-top "
+                    className="card-img-top mt-3"
                     alt="..."
+                    style={{ width: "35vw", height: "15vh" }}
                   />
                   <div className="card-body">
                     <h4 className="card-title">{planta.nomePlanta}</h4>

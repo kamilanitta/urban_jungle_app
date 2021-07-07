@@ -1,7 +1,9 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import axios from "axios";
+import TextInput from "./TextInput";
 
-class Plant extends Component {
+export default class AddPlants extends Component {
   state = {
     imagem: "",
     categoria: "",
@@ -11,33 +13,82 @@ class Plant extends Component {
     plantio: "",
     descricao: "",
   };
+
+  handleChange = (event) => {
+    this.setState({ [event.target.nomePlanta]: event.target.value });
+  };
+
+  handleFormSubmit = async () => {
+    const response = await axios.post(
+      "https://ironrest.herokuapp.com/1-urban-jungle",
+      this.state
+    );
+
+    this.setState({
+      imagem: "",
+      categoria: "",
+      nomePlanta: "",
+      nomeCientifico: "",
+      rega: "",
+      plantio: "",
+      descricao: "",
+    });
+  };
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>imagem</label>
-          <input type="text" name="imagem" value={this.state.image}></input>
-          <label>Nome</label>
-          <input type="text" name="nome" value={this.state.name}></input>
-        </form>
-        <Link
-          to={`/editar-planta/${this.state._id}`}
-          type="Editar planta"
-          className="btn rounded-pill bg-amarelo"
-          style={{ textDecoration: "none" }}
-        >
-          Editar
-        </Link>
-        <Link
-          to={`/apagar-planta/${this.state._id}`}
-          type="Apagar planta"
-          className="rounded-pill bg-laranja"
-          style={{ textDecoration: "none" }}
-        >
-          Apagar
-        </Link>
+      <div className="container">
+        <form onSubmit={this.handleFormSubmit}></form>
+        <TextInput
+          label="Imagem"
+          type="text"
+          name="imagem"
+          value={this.state.imagem}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Categoria"
+          type="text"
+          name="categoria"
+          value={this.state.categoria}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Nome da Planta"
+          type="text"
+          name="nomePlanta"
+          value={this.state.nomePlanta}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Nome Científico"
+          type="text"
+          name="nomeCientifico"
+          value={this.state.nomeCientifico}
+          onChange={this.handleChange}
+        />
+        <p>Informações</p>
+        <TextInput
+          label="Rega"
+          type="text"
+          name="rega"
+          value={this.state.rega}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Plantio"
+          type="text"
+          name="plantio"
+          value={this.state.plantio}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Descrição"
+          type="text"
+          name="descricao"
+          value={this.state.descricao}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
 }
-export default Plant;
