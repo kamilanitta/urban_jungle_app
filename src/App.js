@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Route exact path="/" component={HomePage} />
-        <Route path="/:categoria" component={PlantsGuide} />
+        <Route exact path="/:categoria" component={PlantsGuide} />
 
         <Route path="/add-planta" component={AddPlants} />
         {/* <MyJungle /> */}
