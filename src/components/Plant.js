@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
-import PlantDescription from "./PlantDescription";
 
-export default class Plant extends Component {
+export default class AddPlants extends Component {
   state = {
     imagem: "",
     categoria: "",
@@ -37,58 +36,57 @@ export default class Plant extends Component {
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Imagem</label>
-          <input
-            type="text"
-            name="imagem"
-            value={this.state.imagem}
-            onChange={this.handleChange}
-          ></input>
-          <label>Categoria</label>
-          <input
-            type="text"
-            name="categoria"
-            value={this.state.categoria}
-            onChange={this.handleChange}
-          ></input>
-          <label>Nome da Planta</label>
-          <input
-            type="text"
-            name="nomePlanta"
-            value={this.state.nomePlanta}
-            onChange={this.handleChange}
-          ></input>
-          <label>Nome Científico</label>
-          <input
-            type="text"
-            name="nomeCientifico"
-            value={this.state.nomeCientifico}
-            onChange={this.handleChange}
-          ></input>
-          <p>Informações</p>
-          <label>Rega</label>
-          <input
-            type="text"
-            name="rega"
-            value={this.state.rega}
-            onChange={this.handleChange}
-          ></input>
-          <label>Plantio</label>
-          <input
-            type="text"
-            name="plantio"
-            value={this.state.plantio}
-            onChange={this.handleChange}
-          ></input>
-          <label>Descrição</label>
-          <input
-            type="text"
-            name="descricao"
-            value={this.state.descricao}
-            onChange={this.handleChange}
-          ></input>
-        </form>
+        <form onSubmit={this.handleFormSubmit}></form>
+        <TextInput
+          label="Imagem"
+          type="text"
+          name="imagem"
+          value={this.state.imagem}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Categoria"
+          type="text"
+          name="categoria"
+          value={this.state.categoria}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Nome da Planta"
+          type="text"
+          name="nomePlanta"
+          value={this.state.nomePlanta}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Nome Científico"
+          type="text"
+          name="nomeCientifico"
+          value={this.state.nomeCientifico}
+          onChange={this.handleChange}
+        />
+        <p>Informações</p>
+        <TextInput
+          label="Rega"
+          type="text"
+          name="rega"
+          value={this.state.rega}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Plantio"
+          type="text"
+          name="plantio"
+          value={this.state.plantio}
+          onChange={this.handleChange}
+        />
+        <TextInput
+          label="Descrição"
+          type="text"
+          name="descricao"
+          value={this.state.descricao}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }

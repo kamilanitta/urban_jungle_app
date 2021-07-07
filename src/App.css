@@ -15,7 +15,9 @@
 }
 .cards-plantas {
   padding: 0;
-  max-width: 100%;
+  width: 48%;
+  height: 48%;
+  margin: 1vw;
 }
 
 .container {
@@ -27,11 +29,31 @@
   color: rgb(48, 46, 46);
   text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+.bloco-categoria {
+  margin-bottom: 80px;
+}
+.bloco-plantas {
+  margin-bottom: 200px;
+}
+>>>>>>> 9744b4994c5ad8425252566e1108de653b9bb492
 
 .bg-imagem-home {
-  max-width: 100%;
-  background-position: absolute;
+  background-image: url("https://imagens-revista.vivadecora.com.br/uploads/2018/05/tipos-de-flores-ant%C3%BArio.jpg");
+  height: 250px;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
+<<<<<<< HEAD
+=======
+
+.bg-titulo-home {
+  color: rgb(233, 233, 233);
+  text-align: center;
+  position: bottom;
+  padding-top: 50%;
+}
+>>>>>>> 9744b4994c5ad8425252566e1108de653b9bb492

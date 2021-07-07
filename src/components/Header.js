@@ -7,9 +7,8 @@ function Header() {
     <nav
       className="navbar navbar-dark bg-verde justify-content-center"
       style={{
-        opacity: "60%",
-        width: "375px",
         height: "88px",
+        opacity: "60%",
       }}
     >
       <Link
