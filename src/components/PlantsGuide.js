@@ -19,7 +19,9 @@ class PlantsGuide extends Component {
         return elemento.categoria.includes(categoriaPlanta);
       });
 
-      //console.log(filtroCategorias);
+
+      // console.log(filtroCategorias);
+
 
       this.setState({ plantaList: filtroCategorias });
     } catch (err) {
@@ -33,8 +35,14 @@ class PlantsGuide extends Component {
         <div className=" bloco-plantas row row-cols-2 mt-5 mb-5">
           {this.state.plantaList.map((planta) => {
             return (
-              <div className="card col cards-plantas ">
-                <Link to={`/guia-plantas/${planta._id}`} className="links">
+
+             
+
+
+              <div className="card col">
+                <Link to={`/1-urban-jungle/${planta._id}`} className="links">
+
+
                   <img
                     src={planta.imagem}
                     className="card-img-top mt-3"
@@ -48,7 +56,7 @@ class PlantsGuide extends Component {
               </div>
             );
           })}
-        </div>{" "}
+        </div>
       </div>
     );
   }
