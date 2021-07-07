@@ -18,7 +18,8 @@ export default class AddPlants extends Component {
     console.log(event.target.value);
   };
 
-  handleFormSubmit = async () => {
+  handleFormSubmit = async (event) => {
+    event.preventDefault();
     const response = await axios.post(
       "https://ironrest.herokuapp.com/1-urban-jungle",
       this.state
@@ -37,7 +38,7 @@ export default class AddPlants extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <form onSubmit={this.handleFormSubmit} className="container">
         <TextInput
           label="Imagem"
           type="text"
@@ -89,12 +90,13 @@ export default class AddPlants extends Component {
           onChange={this.handleChange}
         />
         <button
-          onClick={this.handleFormSubmit}
+          // onClick={this.handleFormSubmit}
+          type="submit"
           className="mt-5 btn btn-success"
         >
           Submit
         </button>
-      </div>
+      </form>
     );
   }
 }
