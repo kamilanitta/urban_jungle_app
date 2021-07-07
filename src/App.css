@@ -2,6 +2,13 @@
   background-color: #4c7031;
 }
 
+.bg-amarelo {
+  background-color: #f2ae00;
+}
+.bg-laranja {
+  background-color: #ff7700;
+}
+
 .cards-plantas,
 .imagem-planta {
   text-align: center;
@@ -16,6 +23,7 @@
   text-decoration: none;
 }
 
+
 .bg-imagem-home {
   max-width: 100%;
   background-position: absolute;
@@ -28,4 +36,7 @@
 }
 .bg-laranja {
   background-color: #ff7700;
+
 }
+
+  
