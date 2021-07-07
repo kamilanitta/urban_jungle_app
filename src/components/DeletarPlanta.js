@@ -7,7 +7,7 @@ export default class DeletarPlanta extends Component {
 
     axios
       .delete(
-        `https://ironrest.herokuapp.com/1-urban-jungle/apagar-planta/${id}`
+        `https://ironrest.herokuapp.com/1-urban-jungle/${id}`
       )
       .then((response) => {
         console.log(response);
