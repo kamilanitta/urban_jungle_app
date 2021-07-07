@@ -29,11 +29,11 @@ class PlantsGuide extends Component {
 
   render() {
     return (
-      <div className="container mt-5 mb-5 cards-plantas ">
-        <div className="row row-cols-2">
+      <div className="container ">
+        <div className=" bloco-plantas row row-cols-2 mt-5 mb-5">
           {this.state.plantaList.map((planta) => {
             return (
-              <div className="card col">
+              <div className="card col cards-plantas ">
                 <Link to={planta._id} className="links">
                   <img
                     src={planta.imagem}

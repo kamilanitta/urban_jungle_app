@@ -10,6 +10,9 @@ import PlantsGuide from "./components/PlantsGuide";
 import PlantDescription from "./components/PlantDescription";
 import MyJungle from "./components/MyJungle";
 
+import AddPlants from "./components/AddPlant";
+import Plant from "./components/Plant";
+
 function App() {
   return (
     <div>
@@ -17,6 +20,8 @@ function App() {
         <Header />
         <Route exact path="/" component={HomePage} />
         <Route path="/:categoria" component={PlantsGuide} />
+
+        <Route path="/add-planta" component={AddPlants} />
         {/* <MyJungle /> */}
         {/* <PlantDescription /> */}
 
