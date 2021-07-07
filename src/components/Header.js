@@ -5,7 +5,7 @@ import "../App.css";
 function Header() {
   return (
     <nav
-      className="navbar navbar-dark bg-verde"
+      className="navbar navbar-dark bg-verde justify-content-center"
       style={{
         opacity: "60%",
         width: "375px",

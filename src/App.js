@@ -8,15 +8,24 @@ import HomePage from "./components/HomePage";
 import Header from "./components/Header";
 import AddPlants from "./components/AddPlant";
 import Plant from "./components/Plant";
+import PlantDescription from "./components/PlantDescription";
+import MyJungle from "./components/MyJungle";
+
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
+
         <Route exact path="/" component={HomePage} />
         <Route path="/add-planta" component={AddPlants} />
-        <Route path="/my-jungle" component={Plant} />
+        {/* <MyJungle /> */}
+        {/* <PlantDescription /> */}
+        <Route exact path="/" component={HomePage} />
+        <Route path="/guia-plantas/:descricao" component={PlantDescription} />
+        <Route path="/my-jungle" component={MyJungle} />
+
         <Footer />
       </BrowserRouter>
     </div>
