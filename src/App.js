@@ -21,6 +21,7 @@ function App() {
         <Header />
         <Route exact path="/" component={HomePage} />
         <Route exact path="/:categoria" component={PlantsGuide} />
+
         <Route path="/add-planta" component={AddPlants} />
         <Route path="/1-urban-jungle/:descricao" component={PlantDescription} />
         <Route path="/my-jungle" component={MyJungle} />
