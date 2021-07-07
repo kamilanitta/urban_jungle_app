@@ -6,9 +6,7 @@ export default class DeletarPlanta extends Component {
     const id = this.props.match.params.id;
 
     axios
-      .delete(
-        `https://ironrest.herokuapp.com/1-urban-jungle/apagar-planta/${id}`
-      )
+      .delete(`https://ironrest.herokuapp.com/1-urban-jungle/${id}`)
       .then((response) => {
         console.log(response);
         this.props.history.push("/");

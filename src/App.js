@@ -13,7 +13,6 @@ import DeletarPlanta from "./components/DeletarPlanta";
 import AddPlants from "./components/AddPlant";
 import Plant from "./components/Plant";
 
-
 function App() {
   return (
     <div>
@@ -25,9 +24,10 @@ function App() {
         <Route path="/1-urban-jungle/:descricao" component={PlantDescription} />
         <Route path="/my-jungle" component={MyJungle} />
         {/* (Update) - CRUD */}
-        {/* <Route path="/editar-planta/:id" component={PlantDescription} />
+        <Route path="/editar-planta/:id" component={PlantDescription} />
         {/* (Delete) - CRUD */}
-        {/* <Route path="/apagar-planta/:id" component={DeletarPlanta} /> */}
+        <Route path="/apagar-planta/:id" component={DeletarPlanta} />
+        <Route path="/planta" component={Plant} />
         <Footer />
       </BrowserRouter>
     </div>

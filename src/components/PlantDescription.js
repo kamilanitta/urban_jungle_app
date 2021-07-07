@@ -11,7 +11,6 @@ class PlantDescription extends Component {
     nomePlanta: "",
     nomeCientifico: "",
     descricao: "",
-    //60e3655ae644c20017cfaf36
   };
 
   componentDidMount = async () => {
@@ -33,24 +32,7 @@ class PlantDescription extends Component {
           src={this.state.imagem}
           alt={this.state.nomePlanta}
         />
-        <div className="d-flex justify-content-around mt-1">
-          {/* <Link
-            to={`/editar-planta/${this.state._id}`}
-            type="Editar planta"
-            className="btn rounded-pill bg-amarelo"
-            style={{ textDecoration: "none" }}
-          >
-            Editar
-          </Link>
-          <Link
-            to={`/apagar-planta/${this.state._id}`}
-            type="Apagar planta"
-            className="rounded-pill bg-laranja"
-            style={{ textDecoration: "none" }}
-          >
-            Apagar
-          </Link> */}
-        </div>
+        <div className="d-flex justify-content-around mt-1"></div>
         <div className="textos">
           <h4 className="mt-2">{this.state.nomePlanta}</h4>
           <p className="mb-0">

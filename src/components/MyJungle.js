@@ -22,8 +22,8 @@ export default class MyJungle extends Component {
 
   render() {
     return (
-      <div className="">
-        <h4 className="m-4">Parabéns, Maria! </h4>
+      <div className="m-0">
+        <h4 className="ms-4 mt-0">Parabéns, Maria! </h4>
         <h6 className="ms-4">Sua selva está ficando maravilhosa!</h6>
         <div
           className="d-flex card mt-5 border border-secondary"
