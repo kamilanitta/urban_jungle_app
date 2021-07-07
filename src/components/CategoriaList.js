@@ -2,26 +2,23 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-class PlantsGuide extends Component {
+class PlantList extends Component {
   state = {
     plantaList: [],
   };
 
   componentDidMount = async () => {
     try {
+      const idPlanta = this.props.match.params._id;
       const categoriaPlanta = this.props.match.params.categoria;
 
       const response = await axios.get(
-        `https://ironrest.herokuapp.com/1-urban-jungle`
+        `https://ironrest.herokuapp.com/1-urban-jungle/${categoriaPlanta}/${idPlanta}`
       );
 
-      let filtroCategorias = response.data.filter((elemento) => {
-        return elemento.categoria.includes(categoriaPlanta);
-      });
+      console.log(response);
 
-      console.log(filtroCategorias);
-
-      this.setState({ plantaList: filtroCategorias });
+      this.setState({ ...response.data });
     } catch (err) {
       console.log(err);
     }
@@ -29,19 +26,19 @@ class PlantsGuide extends Component {
 
   render() {
     return (
-      <div className="container mt-5 mb-5 cards-plantas ">
+      <div className="container mt-5 mb-5 ncards-plantas ">
         <div className="row row-cols-2">
           {this.state.plantaList.map((planta) => {
             return (
               <div className="card col">
-                <Link to={planta._id} className="links">
+                <Link to={planta._id}>
                   <img
                     src={planta.imagem}
                     className="card-img-top mt-3"
                     alt="..."
                   />
                   <div className="card-body">
-                    <h4 className="card-title">{planta.nomePlanta}</h4>
+                    <h4 className="card-title">{planta.categoria}</h4>
                   </div>
                 </Link>
               </div>
@@ -53,4 +50,4 @@ class PlantsGuide extends Component {
   }
 }
 
-export default PlantsGuide;
+export default PlantList;

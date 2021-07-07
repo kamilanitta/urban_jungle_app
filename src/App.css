@@ -13,19 +13,42 @@
 .imagem-planta {
   text-align: center;
 }
+.cards-plantas {
+  padding: 0;
+  max-width: 100%;
+}
 
+<<<<<<< HEAD
 .container {
   max-width: 95vw;
   height: auto;
 <<<<<<< HEAD
+=======
+.links {
+  color: rgb(48, 46, 46);
+  text-decoration: none;
+>>>>>>> 92e9ea410c5ff4a2aae1ba2578b8a0b06195ba37
 }
 
-  
+
+.bg-imagem-home {
+  max-width: 100%;
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .bg-amarelo {
   background-color: #f2ae00;
 }
 .bg-laranja {
   background-color: #ff7700;
+<<<<<<< HEAD
 =======
 >>>>>>> dcf89707e7849dca3005174dc3e223c93e875bb0
+=======
+
+>>>>>>> 92e9ea410c5ff4a2aae1ba2578b8a0b06195ba37
 }
+
+  
