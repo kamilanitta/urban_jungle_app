@@ -13,10 +13,29 @@
 .imagem-planta {
   text-align: center;
 }
+.cards-plantas {
+  padding: 0;
+  max-width: 100%;
+}
 
-.container {
-  max-width: 95vw;
-  height: auto;
+.links {
+  color: rgb(48, 46, 46);
+  text-decoration: none;
+}
+
+
+.bg-imagem-home {
+  max-width: 100%;
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.bg-amarelo {
+  background-color: #f2ae00;
+}
+.bg-laranja {
+  background-color: #ff7700;
 
 }
 
