@@ -68,7 +68,34 @@ export default class Plant extends Component {
           </h6>
           <p>{this.state.descricao}</p>
         </div>
+        <div row>
+          <Link
+            to={`/editar-planta/${this.state._id}`}
+            type="text"
+            className="btn rounded-pill bg-amarelo mt-3 col"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              width: "120px",
+            }}
+          >
+            Editar
+          </Link>
+          <Link
+            to={`/apagar-planta/${this.state._id}`}
+            type="text"
+            className="btn rounded-pill bg-laranja mt-3 col"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              width: "120px",
+            }}
+          >
+            Apagar
+          </Link>
+        </div>
       </div>
+
       // <div className="oioioi">
       //   <form onSubmit={this.handleFormSubmit}></form>
 
@@ -116,11 +143,7 @@ export default class Plant extends Component {
       //         onChange={this.handleChange}
       //         className="row-md-2"
       //       />
-      //       <div row>
       //
-      //           Apagar
-      //         </Link>
-      //       </div>
       //     </div>
       //   </div>
       // </div>
