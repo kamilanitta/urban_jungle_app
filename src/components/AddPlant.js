@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
+import Header from "./Header";
 
 export default class AddPlants extends Component {
   state = {
@@ -39,6 +40,7 @@ export default class AddPlants extends Component {
   render() {
     return (
       <form onSubmit={this.handleFormSubmit} className="container">
+        <Header title="Adicionar Planta" />
         <TextInput
           label="Imagem"
           type="text"
@@ -94,7 +96,7 @@ export default class AddPlants extends Component {
           type="submit"
           className="mt-5 btn btn-success"
         >
-          Submit
+          Adicionar
         </button>
       </form>
     );

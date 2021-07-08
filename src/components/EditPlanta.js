@@ -14,7 +14,7 @@ export default class EditPlanta extends Component {
   };
 
   componentDidMount = async () => {
-    const id = this.props.match.params.descricao;
+    const id = this.props.match.params.id;
     console.log(id);
     const response = await axios.get(
       `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`

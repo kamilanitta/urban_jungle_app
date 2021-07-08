@@ -4,6 +4,7 @@ import axios from "axios";
 import TextInput from "./TextInput";
 import MainInput from "./MainInput";
 import PlantCard from "./PlantCard";
+import Header from "./Header";
 
 export default class Plant extends Component {
   state = {
@@ -48,7 +49,8 @@ export default class Plant extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container marg-b">
+        <Header title="Minha Planta" />
         <img
           className="img-fluid"
           src={this.state.imagem}
