@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 
+//Header em todos os componentes, sendo alterado a cada componente a partir da props
+
 function Header(props) {
   return (
     <nav

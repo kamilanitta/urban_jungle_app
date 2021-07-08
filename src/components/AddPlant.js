@@ -4,6 +4,8 @@ import TextInput from "./TextInput";
 import Header from "./Header";
 import MainInput from "./MainInput";
 
+// Formulário, acessado a partir do sinal de "+" situado no footer, para o usuário adicionar plantas
+
 export default class AddPlants extends Component {
   state = {
     imagem: "",
@@ -59,7 +61,7 @@ export default class AddPlants extends Component {
               placeholder="URL da imagem"
               style={{ width: "100%", height: "250px" }}
             />
-            <div className="bloco-deusajuda ">
+            <div className="bloco-inputs ">
               {" "}
               <MainInput
                 type="text"

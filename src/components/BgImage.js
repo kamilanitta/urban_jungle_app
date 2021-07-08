@@ -1,5 +1,5 @@
 import React from "react";
-
+// Apenas renderiza a imagem de background do HomePage
 function BgImage() {
   return (
     <div className="bg-imagem-home">

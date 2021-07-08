@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import BgImage from "./BgImage";
 
+// Renderiza as plantas de acordo com a categoria das plantas.
+
 class HomePage extends Component {
   state = {
     categoriaPlantas: [],
@@ -26,6 +28,8 @@ class HomePage extends Component {
     }
   };
 
+  // Bucando as categorias das plantas
+
   getCategorias = () => {
     let mapPlantas = this.state.categoriaPlantas.map((planta) => {
       return planta.categoria;
@@ -43,6 +47,7 @@ class HomePage extends Component {
     this.setState({ cadaCategoria: categoriaUnica });
   };
 
+  // renderizando com o map todas as categorias de plantas e fazendo link para mostrar todas as plantas da categoria
   render() {
     // console.log(this.state.cadaCategoria);
     return (

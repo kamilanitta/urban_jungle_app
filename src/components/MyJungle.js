@@ -3,6 +3,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import Header from "./Header";
+import Search from "./Search";
+
+// Usando uma API diferente para que sejam guardadas apenas as plantas inseridas do usuário, aqui sendo todas renderizadas e fazendo link para descrição onde possam ser editadas ou apagadas
 
 export default class MyJungle extends Component {
   state = {
@@ -27,7 +30,8 @@ export default class MyJungle extends Component {
     return (
       <div className="marg-b">
         <Header title="My Jungle" />
-        <h4 className="ms-4 mt-5">
+        <Search />
+        <h4 className="ms-4 mt-4">
           <strong>Parabéns!</strong>
         </h4>
         <h6 className="ms-4 mb-4">Sua selva está ficando maravilhosa!</h6>
@@ -67,7 +71,7 @@ export default class MyJungle extends Component {
                         </p>
                       </div>
                       <div className="d-flex flex-row">
-                        <i class="fas fa-seedling align-self-center me-1"></i>
+                        <i className="fas fa-seedling align-self-center me-1"></i>
                         <p className="card-text">
                           <small className="">{selva.plantio}</small>
                         </p>

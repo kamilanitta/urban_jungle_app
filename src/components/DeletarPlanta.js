@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+//Deleta a planta selecionada pelo usuário
+
 export default class DeletarPlanta extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
@@ -15,6 +17,10 @@ export default class DeletarPlanta extends Component {
   }
 
   render() {
-    return <div style={{ textAlign: "center" }}>Apagando...</div>;
+    return (
+      <div>
+        <p className="del-planta-text ">Apagando...</p>
+      </div>
+    );
   }
 }
