@@ -10,7 +10,7 @@ class PlantsGuide extends Component {
   componentDidMount = async () => {
     try {
       const categoriaPlanta = this.props.match.params.categoria;
-
+      console.log(categoriaPlanta);
       const response = await axios.get(
         `https://ironrest.herokuapp.com/1-urban-jungle`
       );
@@ -19,9 +19,7 @@ class PlantsGuide extends Component {
         return elemento.categoria.includes(categoriaPlanta);
       });
 
-
       // console.log(filtroCategorias);
-
 
       this.setState({ plantaList: filtroCategorias });
     } catch (err) {
@@ -32,17 +30,11 @@ class PlantsGuide extends Component {
   render() {
     return (
       <div className="container ">
-        <div className=" bloco-plantas row row-cols-2 mt-5 mb-5">
+        <div className="bloco-plantas row row-cols-2 mt-5 mb-5">
           {this.state.plantaList.map((planta) => {
             return (
-
-             
-
-
               <div className="card col">
-                <Link to={`/1-urban-jungle/${planta._id}`} className="links">
-
-
+                <Link to={`/descricao/${planta._id}`} className="links">
                   <img
                     src={planta.imagem}
                     className="card-img-top mt-3"

@@ -29,10 +29,10 @@ class EditPlanta extends Component {
   };
 
   handleFormSubmit = async () => {
-    const id = this.props.match.params.descricao;
+    const id = this.props.match.params.id;
     console.log(id);
     const response = await axios.put(
-      `https://ironrest.herokuapp.com/1-urban-jungle/${id}`,
+      `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`,
       { ...this.state }
     );
     console.log(response);

@@ -19,16 +19,17 @@ function App() {
       <BrowserRouter>
         <Header />
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/:categoria" component={PlantsGuide} />
+        <Route exact path="/guia/:categoria" component={PlantsGuide} />
 
+        {/* (Create) - CRUD */}
         <Route path="/add-planta" component={AddPlants} />
-        <Route path="/1-urban-jungle/:descricao" component={PlantDescription} />
+        <Route path="/descricao/:descricao" component={PlantDescription} />
         <Route path="/my-jungle" component={MyJungle} />
         {/* (Update) - CRUD */}
         <Route path="/editar-planta/:id" component={PlantDescription} />
         {/* (Delete) - CRUD */}
         <Route path="/apagar-planta/:id" component={DeletarPlanta} />
-        <Route path="/planta" component={Plant} />
+        <Route path="/planta/:id" component={Plant} />
         <Footer />
       </BrowserRouter>
     </div>
