@@ -70,27 +70,27 @@ export default class Plant extends Component {
           </h6>
           <p>{this.state.descricao}</p>
         </div>
-        <div row>
+        <div className="d-flex w-100 justify-content-around">
           <Link
-            to={`/editar-planta/${this.state._id}`}
+            to={`/editar-planta/${this.props.match.params.id}`}
             type="text"
-            className="btn rounded-pill bg-amarelo mt-3 col"
+            className="btn rounded-pill bg-amarelo mt-3"
             style={{
               textDecoration: "none",
               color: "white",
-              width: "120px",
+              width: "40%",
             }}
           >
             Editar
           </Link>
           <Link
-            to={`/apagar-planta/${this.state._id}`}
+            to={`/apagar-planta/${this.props.match.params.id}`}
             type="text"
-            className="btn rounded-pill bg-laranja mt-3 col"
+            className="btn rounded-pill bg-laranja mt-3"
             style={{
               textDecoration: "none",
               color: "white",
-              width: "120px",
+              width: "40%",
             }}
           >
             Apagar

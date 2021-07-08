@@ -9,7 +9,7 @@ export default class DeletarPlanta extends Component {
       .delete(`https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`)
       .then((response) => {
         console.log(response);
-        this.props.history.push("/");
+        this.props.history.push("/my-jungle");
       })
       .catch((err) => console.log(err));
   }

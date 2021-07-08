@@ -19,6 +19,7 @@ export default class EditPlanta extends Component {
     const response = await axios.get(
       `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`
     );
+    delete response.data._id;
     console.log(response);
     this.setState({ ...response.data });
   };
@@ -27,21 +28,43 @@ export default class EditPlanta extends Component {
     this.setState({ [event.target.name]: event.target.value });
     console.log(event.target.value);
   };
-
-  handleFormSubmit = async () => {
+  // handleFormSubmit = async (event) => {
+  //   const id = this.props.match.params.id;
+  //   event.preventDefault();
+  //   axios
+  //     .put(
+  //       `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`,this.state
+  //     )
+  //     .then((response) => {
+  //       this.props.history.push("/my-jungle");
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+  handleFormSubmit = async (event) => {
+    event.preventDefault();
     const id = this.props.match.params.id;
-    console.log(id);
     const response = await axios.put(
       `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`,
-      { ...this.state }
+      this.state
     );
     console.log(response);
-    this.setState({ ...response.data });
+
+    this.setState({
+      imagem: "",
+      categoria: "",
+      nomePlanta: "",
+      nomeCientifico: "",
+      rega: "",
+      plantio: "",
+      descricao: "",
+    });
   };
 
   render() {
     return (
-      <div className="container">
+      <form onSubmit={this.handleFormSubmit} className="container">
         <TextInput
           label="Imagem"
           type="text"
@@ -93,12 +116,13 @@ export default class EditPlanta extends Component {
           onChange={this.handleChange}
         />
         <button
-          onClick={this.handleFormSubmit}
+          //onClick={this.handleFormSubmit}
+          type="submit"
           className="mt-5 btn btn-success"
         >
           Submit
         </button>
-      </div>
+      </form>
     );
   }
 }

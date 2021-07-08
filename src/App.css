@@ -26,6 +26,7 @@
 }
 .bloco-categoria {
   margin-bottom: 80px;
+  transform: translateY(-40px);
 }
 
 .bg-imagem-home {
@@ -41,7 +42,7 @@
   color: rgb(233, 233, 233);
   text-align: center;
   position: bottom;
-  padding-top: 50%;
+  padding-top: 40%;
 }
 /* Plant.js */
 .plantaimg {
