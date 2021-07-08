@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import Search from "./Search";
+import Header from "./Header";
 
 class PlantDescription extends Component {
   state = {
@@ -26,6 +26,7 @@ class PlantDescription extends Component {
   render() {
     return (
       <div className="container">
+        <Header title="Urban Jungle" />
         <img
           className="img-fluid"
           src={this.state.imagem}

@@ -15,6 +15,6 @@ export default class DeletarPlanta extends Component {
   }
 
   render() {
-    return <div>Apagando...</div>;
+    return <div style={{ textAlign: "center" }}>Apagando...</div>;
   }
 }

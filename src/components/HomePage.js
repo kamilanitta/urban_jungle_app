@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 //import PlantCard from "./PlantCard";
-
+import Header from "./Header";
 import BgImage from "./BgImage";
 
 class HomePage extends Component {
@@ -47,7 +47,8 @@ class HomePage extends Component {
   render() {
     // console.log(this.state.cadaCategoria);
     return (
-      <div>
+      <div className="bg-image-home">
+        <Header title="Urban Jungle" />
         <BgImage />
         <div className="container ">
           <div className="bloco-categoria row row-cols-2  ">

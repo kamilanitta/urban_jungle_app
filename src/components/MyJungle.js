@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import Header from "./Header";
+
 export default class MyJungle extends Component {
   state = {
     myJungle: [],
@@ -24,6 +26,7 @@ export default class MyJungle extends Component {
   render() {
     return (
       <div className="marg-b">
+        <Header title="My Jungle" />
         <h4 className="ms-4 mt-5">Parabéns! </h4>
         <h6 className="ms-4 mb-4">Sua selva está ficando maravilhosa!</h6>
         {this.state.myJungle.map((selva) => {
