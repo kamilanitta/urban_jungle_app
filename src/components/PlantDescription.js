@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import Search from "./Search";
+import Header from "./Header";
 
 class PlantDescription extends Component {
   state = {
@@ -25,17 +25,19 @@ class PlantDescription extends Component {
 
   render() {
     return (
-      <div className="container">
-        <Search className="mt-3" />
+      <div className="container p-0">
+        <Header title="Urban Jungle" />
         <img
           className="img-fluid"
           src={this.state.imagem}
           alt={this.state.nomePlanta}
         />
-        <div className="d-flex justify-content-around mt-1"></div>
-        <div className="textos">
-          <h4 className="mt-2">{this.state.nomePlanta}</h4>
-          <p className="mb-0">
+        <div className="d-flex justify-content-around mt-1 "></div>
+        <div className="m-4 ">
+          <h4 className="mt-2 mb-4">
+            <strong>{this.state.nomePlanta}</strong>
+          </h4>
+          <p className="mb-0 ">
             <strong>Nome científico:</strong> {this.state.nomeCientifico}
           </p>
           <p className="mt-0">
@@ -44,7 +46,7 @@ class PlantDescription extends Component {
           <h6>
             <strong>Descricão</strong>
           </h6>
-          <p>{this.state.descricao}</p>
+          <p className="marg-b">{this.state.descricao}</p>
         </div>
       </div>
     );

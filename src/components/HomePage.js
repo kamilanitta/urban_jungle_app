@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-//import PlantCard from "./PlantCard";
-
+import Header from "./Header";
 import BgImage from "./BgImage";
 
 class HomePage extends Component {
@@ -48,6 +47,7 @@ class HomePage extends Component {
     // console.log(this.state.cadaCategoria);
     return (
       <div className="bg-image-home">
+        <Header title="Urban Jungle" />
         <BgImage />
         <div className="container ">
           <div className="bloco-categoria row row-cols-2  ">
@@ -56,14 +56,14 @@ class HomePage extends Component {
                 <div className="card col cards-plantas">
                   <Link
                     className="links"
-                    to={`/${planta.categoria}`}
+                    to={`/guia/${planta.categoria}`}
                     key={planta._id}
                   >
                     <img
                       src={planta.imagem}
-                      className="card-img-top mt-3"
+                      className="card-img-top imagem-planta"
                       alt="..."
-                      style={{ width: "35vw", height: "15vh" }}
+                      style={{ height: "20vh" }}
                     />
                     <div className="card-body">
                       <h4 className="card-title">{planta.categoria}</h4>

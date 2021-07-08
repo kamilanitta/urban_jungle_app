@@ -4,7 +4,10 @@ function BgImage() {
   return (
     <div className="bg-imagem-home">
       <div className="bg-titulo-home">
-        <h2>Welcome to the Jungle!</h2>{" "}
+        <h2>
+          {" "}
+          <strong>Welcome to the Jungle!</strong>
+        </h2>{" "}
       </div>
     </div>
   );

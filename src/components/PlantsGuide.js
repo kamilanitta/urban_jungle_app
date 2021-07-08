@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import Header from "./Header";
+
 class PlantsGuide extends Component {
   state = {
     plantaList: [],
@@ -10,7 +12,7 @@ class PlantsGuide extends Component {
   componentDidMount = async () => {
     try {
       const categoriaPlanta = this.props.match.params.categoria;
-
+      console.log(categoriaPlanta);
       const response = await axios.get(
         `https://ironrest.herokuapp.com/1-urban-jungle`
       );
@@ -19,9 +21,7 @@ class PlantsGuide extends Component {
         return elemento.categoria.includes(categoriaPlanta);
       });
 
-
       // console.log(filtroCategorias);
-
 
       this.setState({ plantaList: filtroCategorias });
     } catch (err) {
@@ -31,23 +31,18 @@ class PlantsGuide extends Component {
 
   render() {
     return (
-      <div className="container ">
-        <div className=" bloco-plantas row row-cols-2 mt-5 mb-5">
+      <div className="container p-0  ">
+        <Header title="Guia de Plantas" />
+        <div className="bloco-plantas row row-cols-2 mt-3  ">
           {this.state.plantaList.map((planta) => {
             return (
-
-             
-
-
-              <div className="card col">
-                <Link to={`/1-urban-jungle/${planta._id}`} className="links">
-
-
+              <div className="card col cards-plantas ">
+                <Link to={`/descricao/${planta._id}`} className="links">
                   <img
                     src={planta.imagem}
-                    className="card-img-top mt-3"
+                    className="card-img-top imagem-planta"
                     alt="..."
-                    style={{ width: "35vw", height: "15vh" }}
+                    style={{ height: "20vh" }}
                   />
                   <div className="card-body">
                     <h4 className="card-title">{planta.nomePlanta}</h4>

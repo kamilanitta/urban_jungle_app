@@ -1,18 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
 
-function Header() {
+function Header(props) {
   return (
     <nav
       className="navbar navbar-dark bg-verde justify-content-center"
       style={{
-        height: "88px",
+        height: "75px",
         opacity: "60%",
       }}
     >
-      <Link
-        to="/"
+      <h1
         style={{
           textDecoration: "none",
           color: "#fff",
@@ -20,8 +18,8 @@ function Header() {
           textAlign: "center",
         }}
       >
-        Urban Jungle
-      </Link>
+        {props.title}
+      </h1>
     </nav>
   );
 }
