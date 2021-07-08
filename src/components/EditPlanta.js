@@ -1,6 +1,10 @@
 import { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
+import Header from "./Header";
+import MainInput from "./MainInput";
+
+//Component responsavel por editar as informações inseridas pelo usuário que ficam contidas no componente Plant.JS
 
 export default class EditPlanta extends Component {
   state = {
@@ -28,20 +32,7 @@ export default class EditPlanta extends Component {
     this.setState({ [event.target.name]: event.target.value });
     console.log(event.target.value);
   };
-  // handleFormSubmit = async (event) => {
-  //   const id = this.props.match.params.id;
-  //   event.preventDefault();
-  //   axios
-  //     .put(
-  //       `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`,this.state
-  //     )
-  //     .then((response) => {
-  //       this.props.history.push("/my-jungle");
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
+
   handleFormSubmit = async (event) => {
     event.preventDefault();
     const id = this.props.match.params.id;
@@ -64,35 +55,117 @@ export default class EditPlanta extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit} className="container">
-        <TextInput
-          label="Imagem"
-          type="text"
-          name="imagem"
-          value={this.state.imagem}
-          onChange={this.handleChange}
-        />
-        <TextInput
-          label="Categoria"
-          type="text"
-          name="categoria"
-          value={this.state.categoria}
-          onChange={this.handleChange}
-        />
-        <TextInput
-          label="Nome da Planta"
-          type="text"
-          name="nomePlanta"
-          value={this.state.nomePlanta}
-          onChange={this.handleChange}
-        />
-        <TextInput
-          label="Nome Científico"
-          type="text"
-          name="nomeCientifico"
-          value={this.state.nomeCientifico}
-          onChange={this.handleChange}
-        />
+      <div>
+        <Header title="Editar Planta" />
+        <form onSubmit={this.handleFormSubmit} className="container p-0">
+          <div
+            className="container p-0 mb-5 d-flex flex-column align-items-center justify-content-center  "
+            style={{
+              backgroundColor: "#d8d8d8",
+              width: "100%",
+              height: "250px",
+            }}
+          >
+            <TextInput
+              type="text"
+              name="imagem"
+              value={this.state.imagem}
+              onChange={this.handleChange}
+              placeholder="URL da imagem"
+              style={{ width: "100%", height: "250px" }}
+            />
+            <div className="bloco-inputs ">
+              {" "}
+              <MainInput
+                type="text"
+                placeholder="Nome da planta"
+                value={this.state.nomePlanta}
+                onChange={this.handleChange}
+                style={{ transform: "translateY(-70px)" }}
+                name="nomePlanta"
+              />
+              <MainInput
+                type="text"
+                placeholder="Categoria"
+                value={this.state.categoria}
+                onChange={this.handleChange}
+                className="mainInputSubtitulo "
+                name="categoria"
+              />
+            </div>
+          </div>{" "}
+          <div className="plantaBox ">
+            <p className="marg-t">
+              <strong>Informações:</strong>
+            </p>
+            <div className="d-flex justify-content-around">
+              <TextInput
+                label="Rega:"
+                type="text"
+                name="rega"
+                value={this.state.rega}
+                onChange={this.handleChange}
+              />
+              <TextInput
+                label="Plantio:"
+                type="text"
+                name="plantio"
+                value={this.state.plantio}
+                onChange={this.handleChange}
+              />
+            </div>{" "}
+            <div className="form-floating mt-4">
+              <TextInput
+                label="Descrição:"
+                type="text"
+                name="descricao"
+                value={this.state.descricao}
+                onChange={this.handleChange}
+                className="form-control"
+                style={{ height: "100px" }}
+              />
+            </div>
+          </div>
+          <div className=" d-flex justify-content-center">
+            <button type="submit" className="mt-5 btn input-radius bg-amarelo">
+              Editar
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+
+    {
+      /* <div className=" p-0 mb-5 d-flex flex-column align-items-center justify-content-center">
+          <TextInput
+            label="Imagem"
+            type="text"
+            name="imagem"
+            value={this.state.imagem}
+            onChange={this.handleChange}
+          />
+          <TextInput
+            label="Categoria"
+            type="text"
+            name="categoria"
+            value={this.state.categoria}
+            onChange={this.handleChange}
+          />
+          <TextInput
+            label="Nome da Planta"
+            type="text"
+            name="nomePlanta"
+            value={this.state.nomePlanta}
+            onChange={this.handleChange}
+          />
+          <TextInput
+            label="Nome Científico"
+            type="text"
+            name="nomeCientifico"
+            value={this.state.nomeCientifico}
+            onChange={this.handleChange}
+          />
+        </div>
         <p>Informações</p>
         <TextInput
           label="Rega"
@@ -120,9 +193,8 @@ export default class EditPlanta extends Component {
           type="submit"
           className="mt-5 btn btn-success"
         >
-          Submit
-        </button>
-      </form>
-    );
+          Editar
+        </button> </form> );*/
+    }
   }
 }

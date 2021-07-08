@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Footer fixado em todo a app, com links para home.js/add-plant/my-jungle
+
 export default function Footer() {
   return (
     <nav

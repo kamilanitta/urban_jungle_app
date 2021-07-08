@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 import Header from "./Header";
+
+//Uma descrição de cada planta com todas as informações inseridas na API
 
 class PlantDescription extends Component {
   state = {

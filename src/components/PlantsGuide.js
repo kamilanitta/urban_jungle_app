@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 
 import Header from "./Header";
 
+// renderiza de acordo com a categoria selecionada no HOMEPAGE.JS todas as plantas da categoria
+
 class PlantsGuide extends Component {
   state = {
     plantaList: [],
   };
 
+  // filtrando cada planta a partir da categoria selecionada
   componentDidMount = async () => {
     try {
       const categoriaPlanta = this.props.match.params.categoria;
@@ -28,7 +31,7 @@ class PlantsGuide extends Component {
       console.log(err);
     }
   };
-
+  // map renderizando todas as plantas a partir da categoria e fazendo o link para abrir uma descrição de cada planta
   render() {
     return (
       <div className="container p-0  ">

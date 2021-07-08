@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import axios from "axios";
-import TextInput from "./TextInput";
-import MainInput from "./MainInput";
 
 import Header from "./Header";
+
+// Mostra a descrição de cada planta inserida pelo usuário. No fim da tela dando a opção de editar ou apagar a planta descrita
 
 export default class Plant extends Component {
   state = {
@@ -29,23 +29,6 @@ export default class Plant extends Component {
   handleChange = (event) => {
     this.setState({ [event.target.nomePlanta]: event.target.value });
   };
-
-  // handleFormSubmit = async () => {
-  //   const response = await axios.post(
-  //     "https://ironrest.herokuapp.com/2-urban-jungle-user",
-  //     this.state
-  //   );
-
-  //   this.setState({
-  //     imagem: "",
-  //     categoria: "",
-  //     nomePlanta: "",
-  //     nomeCientifico: "",
-  //     rega: "",
-  //     plantio: "",
-  //     descricao: "",
-  //   });
-  // };
 
   render() {
     return (

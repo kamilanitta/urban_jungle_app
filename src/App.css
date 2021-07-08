@@ -60,10 +60,6 @@
 }
 /* Plant.js */
 .plantaimg {
-  /* background-image: url(https://1.bp.blogspot.com/-LCF3CsNYO8c/W74WSRS96-I/AAAAAAAAicA/EJelgXWJ3GYEVB2arxYMOQ5Lxb96TnE_wCLcBGAs/s1600/Caladiums.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
   width: 375px;
   height: 314px;
 }
@@ -101,7 +97,7 @@
   display: block;
 }
 
-.bloco-deusajuda {
+.bloco-inputs {
   transform: translateY(95px);
 }
 
@@ -111,4 +107,12 @@
 
 .input-radius {
   border-radius: 20px;
+  width: 120px;
+}
+
+.del-planta-text {
+  text-align: center;
+  padding-top: 350px;
+  font-size: 30px;
+  color: #4c7031;
 }
