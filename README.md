@@ -16,7 +16,7 @@ We are students at Ironhack!
 
 Find out more about this project here []!
 
-The app was inspired on the UX/UI project [https://www.behance.net/gallery/116211547/Urban-Jungle].
+The app was inspired on the UX/UI project, you can check it out [here](https://www.behance.net/gallery/116211547/Urban-Jungle).
 
 
 
