@@ -56,7 +56,7 @@ class HomePage extends Component {
                 <div className="card col cards-plantas">
                   <Link
                     className="links"
-                    to={`/${planta.categoria}`}
+                    to={`/guia/${planta.categoria}`}
                     key={planta._id}
                   >
                     <img

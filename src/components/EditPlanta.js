@@ -2,7 +2,7 @@ import { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
 
-class EditPlanta extends Component {
+export default class EditPlanta extends Component {
   state = {
     imagem: "",
     categoria: "",
@@ -17,7 +17,7 @@ class EditPlanta extends Component {
     const id = this.props.match.params.descricao;
     console.log(id);
     const response = await axios.get(
-      `https://ironrest.herokuapp.com/1-urban-jungle/${id}`
+      `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`
     );
     console.log(response);
     this.setState({ ...response.data });
@@ -29,10 +29,10 @@ class EditPlanta extends Component {
   };
 
   handleFormSubmit = async () => {
-    const id = this.props.match.params.descricao;
+    const id = this.props.match.params.id;
     console.log(id);
     const response = await axios.put(
-      `https://ironrest.herokuapp.com/1-urban-jungle/${id}`,
+      `https://ironrest.herokuapp.com/2-urban-jungle-user/${id}`,
       { ...this.state }
     );
     console.log(response);

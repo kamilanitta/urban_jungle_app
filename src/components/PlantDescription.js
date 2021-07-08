@@ -26,7 +26,6 @@ class PlantDescription extends Component {
   render() {
     return (
       <div className="container">
-        <Search className="mt-3" />
         <img
           className="img-fluid"
           src={this.state.imagem}
