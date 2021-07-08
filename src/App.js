@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 import HomePage from "./components/HomePage";
-import Header from "./components/Header";
 import PlantsGuide from "./components/PlantsGuide";
 import PlantDescription from "./components/PlantDescription";
 import MyJungle from "./components/MyJungle";

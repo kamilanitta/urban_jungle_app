@@ -31,18 +31,18 @@ class PlantsGuide extends Component {
 
   render() {
     return (
-      <div className="container ">
+      <div className="container p-0  ">
         <Header title="Guia de Plantas" />
-        <div className="bloco-plantas row row-cols-2 mt-5 mb-5">
+        <div className="bloco-plantas row row-cols-2 mt-3  ">
           {this.state.plantaList.map((planta) => {
             return (
-              <div className="card col">
+              <div className="card col cards-plantas ">
                 <Link to={`/descricao/${planta._id}`} className="links">
                   <img
                     src={planta.imagem}
-                    className="card-img-top mt-3"
+                    className="card-img-top imagem-planta"
                     alt="..."
-                    style={{ width: "35vw", height: "15vh" }}
+                    style={{ height: "20vh" }}
                   />
                   <div className="card-body">
                     <h4 className="card-title">{planta.nomePlanta}</h4>

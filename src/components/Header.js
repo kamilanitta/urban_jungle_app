@@ -6,7 +6,7 @@ function Header(props) {
     <nav
       className="navbar navbar-dark bg-verde justify-content-center"
       style={{
-        height: "88px",
+        height: "75px",
         opacity: "60%",
       }}
     >

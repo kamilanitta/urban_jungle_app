@@ -27,15 +27,17 @@ export default class MyJungle extends Component {
     return (
       <div className="marg-b">
         <Header title="My Jungle" />
-        <h4 className="ms-4 mt-5">Parabéns! </h4>
+        <h4 className="ms-4 mt-5">
+          <strong>Parabéns!</strong>
+        </h4>
         <h6 className="ms-4 mb-4">Sua selva está ficando maravilhosa!</h6>
         {this.state.myJungle.map((selva) => {
           return (
             <div
-              className="d-flex card border border-secondary"
+              className="d-flex card ms-3 me-3 "
               style={{ maxWidth: "375px" }}
             >
-              <div className="row g-0">
+              <div className="row g-2">
                 <div className="col-4 px-2 align-self-center">
                   <Link to={`/planta/${selva._id}`}>
                     <img
@@ -58,14 +60,14 @@ export default class MyJungle extends Component {
                     <h6 className="card-title mt-3">Informações:</h6>
 
                     <div className="d-flex ">
-                      <div className="d-flex flex-row me-4">
-                        <i className="fas fa-tint align-self-center me-2"></i>
+                      <div className="d-flex flex-row me-3">
+                        <i className="fas fa-tint align-self-center me-1"></i>
                         <p className="card-text">
                           <small className="">{selva.rega}</small>
                         </p>
                       </div>
                       <div className="d-flex flex-row">
-                        <i className="fas fa-exclamation-triangle align-self-center me-2"></i>
+                        <i class="fas fa-seedling align-self-center me-1"></i>
                         <p className="card-text">
                           <small className="">{selva.plantio}</small>
                         </p>

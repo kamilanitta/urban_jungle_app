@@ -9,6 +9,7 @@ export default function MainInput(props) {
         placeholder={props.placeholder}
         id={props.name}
         onChange={props.onChange}
+        name={props.name}
       />
     </div>
   );

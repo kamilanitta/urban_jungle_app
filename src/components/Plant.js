@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import TextInput from "./TextInput";
 import MainInput from "./MainInput";
-import PlantCard from "./PlantCard";
+
 import Header from "./Header";
 
 export default class Plant extends Component {
@@ -49,7 +49,7 @@ export default class Plant extends Component {
 
   render() {
     return (
-      <div className="container marg-b">
+      <div className="container marg-b p-0">
         <Header title="Minha Planta" />
         <img
           className="img-fluid"
@@ -57,8 +57,10 @@ export default class Plant extends Component {
           alt={this.state.nomePlanta}
         />
         <div className="d-flex justify-content-around mt-1"></div>
-        <div className="textos">
-          <h4 className="mt-2">{this.state.nomePlanta}</h4>
+        <div className="m-4">
+          <h4 className="mt-2 mb-4">
+            <strong>{this.state.nomePlanta}</strong>
+          </h4>
           <p className="mb-0">
             <strong>Nome científico:</strong> {this.state.nomeCientifico}
           </p>
@@ -70,7 +72,7 @@ export default class Plant extends Component {
           </h6>
           <p>{this.state.descricao}</p>
         </div>
-        <div className="d-flex w-100 justify-content-around">
+        <div className="d-flex w-100 justify-content-around marg-b">
           <Link
             to={`/editar-planta/${this.props.match.params.id}`}
             type="text"
@@ -97,58 +99,6 @@ export default class Plant extends Component {
           </Link>
         </div>
       </div>
-
-      // <div className="oioioi">
-      //   <form onSubmit={this.handleFormSubmit}></form>
-
-      //   <div className="plantaimg">
-      //     {/* <img
-      //     className="img-fluid"
-      //     src="https://1.bp.blogspot.com/-LCF3CsNYO8c/W74WSRS96-I/AAAAAAAAicA/EJelgXWJ3GYEVB2arxYMOQ5Lxb96TnE_wCLcBGAs/s1600/Caladiums.jpg"
-      //     //  src={this.state.imagem}
-      //     alt={this.state.nomePlanta}
-      //   /> */}
-      //     <PlantCard />
-      //     {/* <MainInput
-      //       type="text"
-      //       placeholder="Nome da planta"
-      //       value={this.state.nomePlanta}
-      //       onChange={this.handleChange}
-
-      //     />
-      //     <MainInput
-      //       type="text"
-      //       placeholder="Categoria"
-      //       value={this.state.categoria}
-      //       onChange={this.handleChange}
-      //       className="mainInputSubtitulo"
-      //     /> */}
-      //   </div>
-      //   <div className="plantaBox d-flex flex-column">
-      //     <p className="mt-3">
-      //       <strong>Informações:</strong>
-      //     </p>
-      //     <div className="d-flex row ">
-      //       <TextInput
-      //         label="Rega"
-      //         type="text"
-      //         name="rega"
-      //         value={this.state.rega}
-      //         onChange={this.handleChange}
-      //         className="row-md-2"
-      //       />
-      //       <TextInput
-      //         label="Plantio"
-      //         type="text"
-      //         name="plantio"
-      //         value={this.state.plantio}
-      //         onChange={this.handleChange}
-      //         className="row-md-2"
-      //       />
-      //
-      //     </div>
-      //   </div>
-      // </div>
     );
   }
 }

@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
 .bg-verde {
   background-color: #4c7031;
 }
@@ -12,11 +18,11 @@
 .cards-plantas,
 .imagem-planta {
   text-align: center;
+  border-radius: 20px;
 }
 .cards-plantas {
   padding: 0;
-  width: 48%;
-  height: 48%;
+  width: 46%;
   margin: 1vw;
 }
 
@@ -25,8 +31,15 @@
   text-decoration: none;
 }
 .bloco-categoria {
-  margin-bottom: 80px;
+  margin-left: 5px;
+  margin-bottom: 40px;
   transform: translateY(-40px);
+  padding: 0;
+}
+
+.bloco-plantas {
+  margin-left: 5px;
+  margin-bottom: 80px;
 }
 
 .bg-imagem-home {
@@ -39,10 +52,11 @@
 }
 
 .bg-titulo-home {
+  font-weight: bolder;
   color: rgb(233, 233, 233);
   text-align: center;
   position: bottom;
-  padding-top: 40%;
+  padding-top: 41%;
 }
 /* Plant.js */
 .plantaimg {
@@ -74,6 +88,7 @@
   text-align: center;
   margin: 0 auto;
 }
+
 .plantNameBox {
   background: #d8d8d8;
   border-color: grey;
@@ -81,4 +96,19 @@
 }
 .marg-b {
   margin-bottom: 80px;
+}
+.btn-submit {
+  display: block;
+}
+
+.bloco-deusajuda {
+  transform: translateY(95px);
+}
+
+.marg-t {
+  margin-top: 80px;
+}
+
+.input-radius {
+  border-radius: 20px;
 }
