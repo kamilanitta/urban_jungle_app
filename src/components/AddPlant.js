@@ -21,10 +21,10 @@ export default class AddPlants extends Component {
   handleFormSubmit = async (event) => {
     event.preventDefault();
     const response = await axios.post(
-      "https://ironrest.herokuapp.com/1-urban-jungle",
+      "https://ironrest.herokuapp.com/2-urban-jungle-user",
       this.state
     );
-    console.log(response);
+    //console.log(response);
 
     this.setState({
       imagem: "",

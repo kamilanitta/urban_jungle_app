@@ -13,8 +13,9 @@ export default class MyJungle extends Component {
   };
 
   componentDidMount = async () => {
+    const id = this.props.match.params.myjungle;
     const response = await axios.get(
-      `https://ironrest.herokuapp.com/1-urban-jungle/${this.props.match.params.id}`
+      `https://ironrest.herokuapp.com/2-urban-jungle-user`
     );
     console.log(response);
     this.setState({ ...response.data });
