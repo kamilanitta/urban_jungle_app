@@ -47,7 +47,7 @@ class HomePage extends Component {
   render() {
     // console.log(this.state.cadaCategoria);
     return (
-      <div className="bg-image-home">
+      <div>
         <BgImage />
         <div className="container ">
           <div className="bloco-categoria row row-cols-2  ">

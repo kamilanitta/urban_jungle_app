@@ -94,7 +94,7 @@ export default class AddPlants extends Component {
           type="submit"
           className="mt-5 btn btn-success"
         >
-          Submit
+          Adicionar
         </button>
       </form>
     );
