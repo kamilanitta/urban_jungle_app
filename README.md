@@ -18,7 +18,7 @@ We are students at Ironhack!
 
 Find out more about this project [here](https://docs.google.com/presentation/d/1a1MYgpW5xTL4QvwYbpo75Z8n1SU3CTA6uiyTvBGJs_M/edit#slide=id.gc6f972163_0_8)!
 
-Try it out out app [here](https://urban-jungle.netlify.app/)!
+Try it out our app [here](https://urban-jungle.netlify.app/)!
 The project is an app, remember to use the Iphone X device to check it out. ;)
 
 The app was inspired on the UX/UI project, you can check it out [here](https://www.behance.net/gallery/116211547/Urban-Jungle).
