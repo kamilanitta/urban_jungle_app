@@ -16,6 +16,7 @@ We are students at Ironhack!
 - Kamila Nitta
 - Priscila Veras
 
-Find out more about this project [here]!
+Find out more about this project [here](https://urban-jungle.netlify.app/)!
+The project is an app, remember to use the Iphone X device to check it out. ;)
 
 The app was inspired on the UX/UI project, you can check it out [here](https://www.behance.net/gallery/116211547/Urban-Jungle).
