@@ -58,6 +58,7 @@
   position: bottom;
   padding-top: 41%;
 }
+
 /* Plant.js */
 .plantaimg {
   width: 375px;
@@ -70,6 +71,8 @@
   z-index: 1;
   box-sizing: border-box;
 }
+
+/* MainInput.js */
 .mainInputTitulo {
   font-size: 28px;
 }
